@@ -793,8 +793,10 @@
 
       // Hide and clear the results dropdown
       function hide_dropdown () {
+        if (!event.shiftKey) {
           dropdown.hide().empty();
           selected_dropdown_item = null;
+        }
       }
 
       function show_dropdown() {
